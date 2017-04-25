@@ -43,18 +43,7 @@ It'll take a few steps to solve this cipher. Have fun!
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/throw
 function caesarShiftInt(integer) {
-  var difference = 122 - integer;
-    if (integer < 97 ) {
-      throw 'Error: integer too low';
-    } else if (integer > 122) {
-
-      throw 'Error: integer too high';
-    } else if (integer <= 109) {
-
-      return integer + 13;
-    } else {
-      return integer  - 13;
-    }
+  // YOUR CODE HERE
 }
 
 // Define a function named caesarShiftChar that takes a one argument
@@ -72,14 +61,7 @@ function caesarShiftInt(integer) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/fromCodePoint
 
-function caesarShiftChar(char) {
-  var outputStr = '';
-  for (var i =0; i < message.length; i++) {
-    var rot13 = message.charCodePoint(i) +13;
-    outputStr += String.fromCharCode(rot13);
-  }
-  console.log(outputStr);
-}
+
 
 
 // Define a function named encodeMessage that takes a one argument

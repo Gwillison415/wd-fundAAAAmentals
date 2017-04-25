@@ -57,7 +57,10 @@ function repeat(str, times) {
 // given [88, 67, 70, 92, 53], then return [88, 70, 92].
 
 function filterPassingGrades(grades) {
-  
+    let passing = grades.filter((grade) => {
+      return grade >= 70;
+    });
+    return passing;
 }
 
 
@@ -69,7 +72,14 @@ function filterPassingGrades(grades) {
 // Return a new array of numbers where all from elements are replaced with to.
 // For example, given [1, 3, 2, 1, 3], 1, and 4, then return [4, 3, 2, 4, 3].
 
-
+function replace(arr, from, to) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === from) {
+      arr[i] = to;
+    }
+  }
+  return arr;
+}
 
 
 // Define a function named flatten that takes in one argument.
@@ -82,7 +92,15 @@ function filterPassingGrades(grades) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat
 
-
+function flatten(arr) {
+  var output = [];
+  arr.forEach((elem) =>{
+    for (var i = 0; i < elem.length; i++) {
+      output.push(elem[i]);
+    }
+  });
+  return output;
+}
 
 
 // Define a function named max that takes in one argument.
@@ -184,9 +202,16 @@ function median(arr) {
 //     str (string)
 //
 // Return true if that string exists in the array, otherwise false.
+//
 
-
-
+function contains(arr, str) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] === str) {
+      return true;
+    }
+  }
+  return false;
+}
 
 // Define a function named distance that takes in two arguments.
 //    point1 (object)
@@ -217,6 +242,16 @@ function distance(point1, point2) {
 // the latest object to have the key will determine the value. For example,
 // given {c: 3} and {c: 4}, then return {c: 4}.
 
+function combine(obj1, obj2) {
+
+    var outputObj = obj1;
+    for(var key in obj2) {
+      console.log(key, obj2[key]);
+      outputObj[key] = obj2[key];
+    }
+    return outputObj;
+
+}
 
 
 // Define a function called invert that takes in one argument.
@@ -225,17 +260,25 @@ function distance(point1, point2) {
 // Return a new object where the keys and values of the argument are inverted.
 // For example, given { a: 1, b: 2 }, then return { '1': 'a', '2': 'b' }.
 
-
-
+function invert(obj) {
+  var newKeys = Object.values(obj);
+  var newValues = Object.keys(obj);
+  var outputObj ={};
+  for (var i = 0; i < newValues.length; i++) {
+    outputObj[newKeys[i]] = newValues[i];
+  }
+  //console.log(outputObj);
+  return outputObj;
+}
 
 // Define a function named values that takes in one argument.
 //    obj (object)
 //
 // Return an array of the values of the object. For example, given
 // { a: 1, b: 2, c: 3 }, then return [1, 2, 3].
-
-
-
+function values(obj) {
+  return Object.values(obj);
+}
 
 // Define a function called toPairs that takes in one argument.
 //    obj (object)
@@ -244,8 +287,15 @@ function distance(point1, point2) {
 // argument. For example, given { a: 1, b: 2 }, then return
 // [['a', 1], ['b', 2]].
 
-
-
+function toPairs(obj) {
+    var array =[];
+    for (var key in obj) {
+      array.push([key, obj[key]])
+    }
+    console.log(array);
+    return array;
+}
+toPairs({ a: 1, b: 2 });
 
 // Define a function called fromPairs that takes in one argument.
 //    arr (array)
@@ -253,3 +303,11 @@ function distance(point1, point2) {
 // Return a new object where each key-value pair is from an element in the
 // argument. For example, given [['a', 1], ['b', 2]], then return
 // { a: 1, b: 2 }.
+function fromPairs(arr) {
+  var outputObj ={};
+    for (var i = 0; i < arr.length; i++) {
+      outputObj[arr[i][0]] = arr[i][1];
+
+    }
+    return outputObj;
+}

@@ -4,7 +4,7 @@
 //
 // Return the sum of these two arguments
 function sum(a, b) {
-   return a + b;
+  // return a + b;
 }
 
 // Define a function named product that takes two arguments
@@ -13,7 +13,7 @@ function sum(a, b) {
 //
 // Return the product of these two arguments
 function product(a, b) {
-  return a * b;
+  // YOUR CODE HERE
 }
 
 // Define a function named sumAndProduct that takes three arguments
@@ -26,7 +26,7 @@ function product(a, b) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Grouping
 function sumAndProduct(x, y, z) {
-    return (x + y) *z;
+
 }
 
 // Define a function named averageMovieReview that takes three arguments
@@ -37,9 +37,7 @@ function sumAndProduct(x, y, z) {
 // Return the average of the three arguments. For example, given 2, 2, and 5,
 // then return 3.
 function averageMovieReview(rachel, roger, jake) {
-      var output = 0;
-      output = rachel + roger + jake;
-      return output / 3;
+
 }
 
 // Define a function named weightedAverageMovieReview that takes three arguments
@@ -54,10 +52,6 @@ function averageMovieReview(rachel, roger, jake) {
 //
 // For example, given 2, 2, and 5, with the above weights, then return 4.5
 function weightedAverageMovieReview(rachel, roger, jake) {
-      rachel *= 0.25;
-      jake *= 2.2;
-
-      return (rachel + jake + roger) /3;
 
 }
 
@@ -68,7 +62,7 @@ function weightedAverageMovieReview(rachel, roger, jake) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/ceil
 function roundUp(decimal) {
-    return Math.ceil(decimal);
+
 }
 
 // Define a function named toFahrenheit that takes one argument
@@ -76,9 +70,6 @@ function roundUp(decimal) {
 //
 // Return the argument converted to Fahrenheit rounded to the nearest integer.
 // Use Google to find the formula.
-function toFahrenheit(celsius) {
-  return Math.round((celsius * 9/5) + 32);
-}
 
 
 
@@ -90,9 +81,7 @@ function toFahrenheit(celsius) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/PI
 
-function areaOfCircle(radius) {
-  return Math.PI * (radius ** 2);
-}
+
 
 // Define a function named areaOfRing that takes two arguments
 //    outerRadius (number)
@@ -101,9 +90,7 @@ function areaOfCircle(radius) {
 // Return the area of a circular ring using these arguments. Use Google to find
 // the formula.
 
-function areaOfRing(outerRadius, innerRadius) {
-    return areaOfCircle(outerRadius) - areaOfCircle(innerRadius);
-}
+
 
 // Define a function named greet that takes 2 arguments
 //    firstName (string)
@@ -112,9 +99,7 @@ function areaOfRing(outerRadius, innerRadius) {
 // Return a string in the format 'Hello, Kelly Rippa!' using these arguments
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String#Template_strings
-function greet(firstName, lastName) {
-    return "Hello, " + firstName + " " + lastName +"!";
-}
+
 
 
 // Define a function named toSentence that takes four arguments
@@ -131,13 +116,7 @@ function greet(firstName, lastName) {
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Addition
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Expressions_and_Operators#String_operators
-function toSentence(word1, word2, word3, oxfordComma) {
-  if(oxfordComma) {
-    return word1 + ", " + word2 +", and " + word3 +".";
-  } else {
-    return word1 + ", " + word2 +" and " + word3 +".";
-  }
-}
+
 
 
 // Define a function named toRoman that takes one argument
@@ -151,36 +130,7 @@ function toSentence(word1, word2, word3, oxfordComma) {
 //    Return the argument converted to a roman numeral string
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling#switch_statement
-function toRoman(arabic) {
-    var output = '';
-    if (arabic < 1) {
-      return null;
-    } else if (arabic > 10) {
-      return null;
-    } else if ( arabic < 4) {
-      for (var i = 0; i < arabic; i++) {
-        output += "I";
-      }
-    } else if (arabic > 3 && arabic <= 10) {
-        switch (true) {
-          case arabic == 4:
-            return "IV";
-          case arabic == 5:
-            return "V";
-          case arabic == 6:
-            return "VI";
-          case arabic == 7:
-            return "VII";
-          case arabic == 8:
-            return "VIII";
-          case arabic == 9:
-            return "IX";
-          case arabic == 10:
-            return "X";
-        }
-    }
-    return output;
-}
+
 
 
 // Define a function toDolla that takes one argument
@@ -191,9 +141,7 @@ function toRoman(arabic) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/toFixed
 
-function toDolla(number) {
-  return "$" + number.toFixed(2);
-}
+
 
 // Define a function named percentage that takes two arguments
 //    numerator (number)
@@ -201,10 +149,6 @@ function toDolla(number) {
 //
 // Return the percentage of the first argument divided by the second. For
 // example, given 1 and 4, then return '25.0%'.
-  function percentage(numerator, denominator) {
-        var output = (numerator / denominator) * 100;
-        return output.toFixed(1) + "%";
-  }
 
 
 
@@ -220,13 +164,7 @@ function toDolla(number) {
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Strict_equality_using
 //
 // See https://dorey.github.io/JavaScript-Equality-Table/
-function isStrictlyEqual(value1, value2) {
-  if ( value1 === value2) {
-    return true;
-  } else {
-    return false;
-  }
-}
+
 
 
 // Define a function named isLooselyEqual that takes two arguments
@@ -240,12 +178,7 @@ function isStrictlyEqual(value1, value2) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#Loose_equality_using
 
-function isLooselyEqual(value1, value2) {
-  if (value1 == value2) {
-    return true;
-  }
-  return false;
-}
+
 
 // Define a function named remainder that takes two arguments
 //    numerator (number)
@@ -256,9 +189,7 @@ function isLooselyEqual(value1, value2) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Arithmetic_Operators#Remainder_()
 
-function remainder(numerator, denominator) {
-    return numerator % denominator;
-}
+
 
 // Define a function named isEven that takes one argument
 //    integer (number)
@@ -270,12 +201,7 @@ function remainder(numerator, denominator) {
 //
 // Hint: What number will give you a remainder of 0 if the argument is even?
 
-function  isEven(integer) {
-  if (integer % 2 == 0) {
-    return true;
-  }
-  return false;
-}
+
 
 // Define a function named isOdd that takes one argument
 //    integer (number)
@@ -285,12 +211,7 @@ function  isEven(integer) {
 // Otherwise
 //    Return false
 
-function isOdd(integer) {
-  if (integer % 2 == 1) {
-    return true;
-  }
-  return false;
-}
+
 
 // Define a function named isVowel that takes one argument
 //    letter (string)
@@ -302,17 +223,7 @@ function isOdd(integer) {
 //
 // Treat 'y' as a consonant.
 
-function isVowel(letter) {
-  let vowels = ["a", "i", "e", "o", "u"];
 
-    for (var i = 0; i < vowels.length; i++) {
-      if (vowels[i] == letter) {
-        return true;
-      }
-    }
-
-  return false;
-}
 
 // Define a function named largestOfThree which takes three arguments
 //    value1 (number)
@@ -323,15 +234,7 @@ function isVowel(letter) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
 
-function largestOfThree(value1, value2, value3) {
-    let output = 0;
-    for (var i = 0; i < arguments.length; i++) {
-      if (arguments[i] > output) {
-        output = arguments[i];
-      }
-    }
-    return output;
-}
+
 
 // Define a function named longestOfThree which takes three arguments
 //    value1 (string)
@@ -344,15 +247,7 @@ function largestOfThree(value1, value2, value3) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/max
 
-function longestOfThree(value1, value2, value3) {
-  let output = '';
-  for (var i = 0; i < arguments.length; i++) {
-    if (arguments[i].length > output.length) {
-      output = arguments[i];
-    }
-  }
-  return output;
-}
+
 
 // Define a function named iceCreamPosition that takes two arguments
 //    pieTemperature (string)
@@ -367,17 +262,7 @@ function longestOfThree(value1, value2, value3) {
 //      Return 'on the side'
 // Otherwise
 //    Return 'up to you'
-function iceCreamPosition(pieTemperature, iceCreamFlavor) {
-  if (iceCreamFlavor == "cardamom") {
-    return "not at all";
-  } else if (pieTemperature == 'cold' ) {
-    return "on top";
-  } else if (pieTemperature == 'warm') {
-    return 'on the side';
-  } else {
-    return 'up to you';
-  }
-}
+
 
 
 // Define a function named isLeapYear that takes one argument
@@ -389,19 +274,8 @@ function iceCreamPosition(pieTemperature, iceCreamFlavor) {
 //    Return false
 //
 // See: https://en.wikipedia.org/wiki/Leap_year#Algorithm
-function isLeapYear(year) {
 
-    if (year % 4 === 0 && year % 100 !== 0 || year % 400 == 0) {
-      return true;
-    }
-    return false;
-}
 
-//not Leap_year
-// if (year is not divisible by 4) then (it is a common year)
-// else if (year is not divisible by 100) then (it is a leap year)
-// else if (year is not divisible by 400) then (it is a common year)
-// else (it is a leap year)
 
 // Define a function named shout that takes one argument
 //    message (string)
@@ -411,14 +285,7 @@ function isLeapYear(year) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 
-function shout(message) {
-  message = message.split(' ');
-  let output =[];
-  message.forEach((elem) => {
-     output.push(elem.toUpperCase());
-  });
-  return output.join(' ');
-}
+
 
 // Define a function named whisper that takes one argument
 //    message (string)
@@ -428,14 +295,7 @@ function shout(message) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String
 
-function whisper(message) {
-  message = message.split(' ');
-  let output =[];
-  message.forEach((elem) => {
-     output.push(elem.toLowerCase());
-  });
-  return 'shhh... ' + output.join(' ');
-}
+
 
 // Define a function named stopAt that takes two arguments
 //   source (string)
@@ -452,9 +312,7 @@ function whisper(message) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
 
-function stopAt(source, stop) {
-  return source.slice(0, source.indexOf(stop) -1);
-}
+
 
 // Define a function named capitalize that takes one argument
 //    message (string)
@@ -464,9 +322,7 @@ function stopAt(source, stop) {
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/substring
 
-function capitalize(message) {
-  return message.charAt(0).toUpperCase() + message.slice(1);
-}
+
 
 // Define a function named leftPad5 that takes one argument
 //    word (string)
@@ -475,15 +331,6 @@ function capitalize(message) {
 //    Return the argument but prefixed with spaces until it's 5 characters long
 // If the argument's length is 5 or more characters
 //    Return the argument
-
-function leftPad5(word) {
-  var size =5 - word.length;
-  var output = '';
-  for (var i = 0; i < size; i++) {
-    output+= " ";
-}
-return output+word;
-}
 
 
 
@@ -497,12 +344,7 @@ return output+word;
 //
 // See https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/typeof
 
-function superPicky(value) {
-  if (typeof value === 'string') {
-    return 'Thanks! Got it.';
-  }
-  return 'I wanted a string, but all I got was a stinking ' + typeof value;
-}
+
 
 // Define a function named calculateTaxRate that takes two arguments
 //    salary (number from 1 to 74,900)
@@ -514,34 +356,3 @@ function superPicky(value) {
 //    Return a string that says 'Better call an accountant'
 // Otherwise
 //    Return the correct tax rate as a string using the table from http://www.efile.com/tax-service/tax-calculator/tax-brackets/
-// var taxBrackets =[ 'single' :{
-//   10: 9275,
-//   15: 37650,
-//   25: 91150,
-//
-// }, 'joint' : { 10: 18550, 15: 75000 }];
-function calculateTaxRate(salary, status) {
-// can't use if Statements
-  if (status !== 'single' && status !== 'joint') {
-    return 'Better call an accountant';
-  } else if (salary > 74900) {
-    return 'Better call an accountant';
-  }
-  else if (status === 'joint') {
-    if (salary <= 18500) {
-      return "10%";
-    } else {
-      return "15%";
-    }
-  } else {
-    if (salary <= 9275) {
-      return "10%";
-    } else if (salary <= 37650) {
-      return "15%";
-    } else {
-      return "25%";
-    }
-  }
-
-
-}
